@@ -1,0 +1,114 @@
+.page1 {
+    padding: 3vw 2vw;
+    width: 100%;
+    height: 400vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+}
+
+.hero {
+    background-color: antiquewhite;
+    height: 40rem;
+    width: 100%;
+    border-radius: 1rem;
+    position: relative;
+    top: -2vw;
+    z-index: 1;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        /* filter: brightness(1) contrast(1.5); */
+    }
+}
+
+.hero-text {
+    position: absolute;
+    top: 22rem;
+    color: rgb(255, 255, 255);
+    font-size: 3vw;
+    padding-left: 5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    gap: 8vw;
+
+    #hero-desc {
+        font-size: 1vw;
+        width: 40vw;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+}
+
+.hero-btn {
+    border: none;
+    padding: 0.5rem 3rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    display: flex;
+    font-size: 1vw;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .page1 {
+        padding: 4vw 1vw;
+        height: 250vh;
+    }
+    .hero {
+        height: 28rem;
+    }
+    .hero-text {
+        top: 14rem;
+        font-size: 4vw;
+        padding-left: 2rem;
+        gap: 4vw;
+    }
+    .hero-text #hero-desc {
+        font-size: 1.5vw;
+        width: 60vw;
+    }
+    .hero-btn {
+        font-size: 1.5vw;
+        padding: 0.5rem 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .page1 {
+        padding: 6vw 1vw;
+        height: auto;
+    }
+    .hero {
+        height: 18rem;
+        border-radius: 0.5rem;
+    }
+    .hero-text {
+        top: 7rem;
+        font-size: 6vw;
+        flex-direction: column;
+        padding-left: 1rem;
+        gap: 2vw;
+    }
+    .hero-text #hero-desc {
+        font-size: 3vw;
+        width: 90vw;
+        gap: 1vw;
+    }
+    .hero-btn {
+        font-size: 3vw;
+        padding: 0.5rem 1.5rem;
+    }
+}
