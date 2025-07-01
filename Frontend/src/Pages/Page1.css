@@ -1,7 +1,6 @@
 .page1 {
-    padding: 3vw 2vw;
+    padding: 3vw 3vw;
     width: 100%;
-    height: 400vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,29 +9,35 @@
 
 .hero {
     background-color: antiquewhite;
-    height: 40rem;
+    height: 40vw;
     width: 100%;
     border-radius: 1rem;
     position: relative;
     top: -2vw;
     z-index: 1;
     overflow: hidden;
-
     img {
         width: 100%;
         height: 100%;
         object-fit: fill;
-        /* filter: brightness(1) contrast(1.5); */
     }
+}
+
+.hero-layar {
+    width: 100%;
+    height: 40vw;
+    background-color: rgba(0, 0, 0, 0.27);
+    position: absolute;
+    top: 0;
 }
 
 .hero-text {
     position: absolute;
-    top: 22rem;
+    top: 22vw;
     color: rgb(255, 255, 255);
-    font-size: 3vw;
+    font-size: 2.5vw;
     padding-left: 5rem;
-    font-weight: 500;
+    font-weight: 300;
     display: flex;
     justify-content: space-between;
     gap: 8vw;
@@ -49,66 +54,142 @@
 
 .hero-btn {
     border: none;
-    padding: 0.5rem 3rem;
-    border-radius: 0.2rem;
+    padding: 0.8rem 3rem;
+    border-radius: 0.5rem;
     cursor: pointer;
     background-color: white;
-    color: black;
+    color: #92300a;
     display: flex;
     font-size: 1vw;
     align-items: center;
     gap: 0.5rem;
     width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .page1 {
-        padding: 4vw 1vw;
-        height: 250vh;
-    }
-    .hero {
-        height: 28rem;
-    }
-    .hero-text {
-        top: 14rem;
-        font-size: 4vw;
-        padding-left: 2rem;
-        gap: 4vw;
-    }
-    .hero-text #hero-desc {
-        font-size: 1.5vw;
-        width: 60vw;
-    }
-    .hero-btn {
-        font-size: 1.5vw;
-        padding: 0.5rem 2rem;
+.hero-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.1) 100%);
+    transform: skewX(-25deg);
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.hero-btn:hover::before {
+    left: 120%;
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section {
+    margin-top: 2rem;
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.section-part1 {
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(to left,#92300a,#d65826);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    padding: 2rem;
+}
+
+.sp1-1 {
+    display: flex;
+    gap: 1rem;
+    font-size: 3rem;
+    justify-content: space-between;
+
+    .sp11-desc {
+        font-size: 1vw;
+        font-weight: 200;
+        width: 60%;
     }
 }
 
-@media (max-width: 600px) {
-    .page1 {
-        padding: 6vw 1vw;
-        height: auto;
+
+
+.sp1-2 {
+    display: flex;
+    gap: 1rem;
+    font-size: 3rem;
+    justify-content: space-between;
+
+    .sp11-desc {
+        font-size: 1vw;
+        font-weight: 200;
+        /* width: 60%; */
     }
-    .hero {
-        height: 18rem;
-        border-radius: 0.5rem;
-    }
-    .hero-text {
-        top: 7rem;
-        font-size: 6vw;
+}
+
+.section-part2 {
+    width: 70%;
+    height: 100%;
+    background: rgba(241, 236, 209, 0.989);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #sp2-desc {
+        width: 60%;
+        padding: 4rem;
+        display: flex;
         flex-direction: column;
-        padding-left: 1rem;
-        gap: 2vw;
+        gap: 1rem;
+
+        p {
+            font-size: 1vw;
+            font-weight: 300;
+            text-align: justify;
+        }
     }
-    .hero-text #hero-desc {
-        font-size: 3vw;
-        width: 90vw;
-        gap: 1vw;
+
+    h3 {
+        font-size: 2vw;
+        font-weight: 500;
     }
-    .hero-btn {
-        font-size: 3vw;
-        padding: 0.5rem 1.5rem;
+
+}
+
+.section-part2-image {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    background-color: azure;
+    position: relative;
+    left: 6rem;
+    border: 2rem solid rgba(190, 148, 50, 0.592);
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
+}
+
+.section2 {
+    margin-top: 5rem;
+    width: 100%;
+    p {
+        font-size: 2vw;
+        font-weight: 500;
+    }
+    /* position: relative; */
 }
