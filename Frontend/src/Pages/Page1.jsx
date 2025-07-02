@@ -1,14 +1,30 @@
 import { Navbar } from '../components/Navbar/Navbar'
 import './Page1.css'
-import Hero from '../assets/Hero.jpg'
-import whoweare from '../assets/whoweare.jpg'
+import {Hero,WhoWeAre,CardImage1,CardImage2,CardImage3,CardImage4} from '../assets/assets.js'
 import { GoArrowUpRight } from "react-icons/go";
 import { FurnishingCard } from '../components/FurnishingCard/FurnishingCard';
-const card=[
-    "Aman",
-    "Simi",
-    "Aman",
-    "Simi",
+import { Footer } from '../components/Footer/Footer';
+const card = [
+    {
+        image: CardImage1,
+        title: "Minimalist Sofa",
+        description: "Modern, comfy sofa with clean lines and a neutral look. Perfect for relaxing after a long day, it seamlessly fits into any living room decor while offering exceptional comfort and durability.",
+    },
+    {
+        image: CardImage2,
+        title: "Eco Wood Dining Set",
+        description: "Sustainable wood dining set with a warm, natural finish. Designed for family gatherings and dinner parties, this set combines eco-friendly materials with timeless style and sturdy craftsmanship.",
+    },
+    {
+        image: CardImage3,
+        title: "Compact Study Desk",
+        description: "Space-saving desk with storage for small workspaces. Ideal for students or remote workers, it features built-in shelves and a sleek design to keep your essentials organized and accessible.",
+    },
+    {
+        image: CardImage4,
+        title: "Classic Lounge Chair",
+        description: "Eco-friendly lounge chair with ergonomic comfort. Its supportive design and soft upholstery make it a perfect addition to any reading nook or relaxation corner in your home.",
+    }
 ]
 export const Page1 = () => {
     return (
@@ -55,18 +71,18 @@ export const Page1 = () => {
                         <p>At the heart of our brand lies a passion for design and a commitment to quality. We blend tradition with innovation to deliver furniture that’s as refined as it is comfortable for homes that deserve nothing less.</p>
                     </p>
                     <div className="section-part2-image">
-                        <img src={whoweare} alt="" />
+                        <img src={WhoWeAre} alt="" />
                     </div>
                 </div>
             </div>
             <div className="section2">
                 {
-                    card.map(()=>{
-                        return <FurnishingCard/>
+                    card.map((item,index)=>{
+                        return <FurnishingCard key={index} image={item.image} no={index+1} head={item.title} desc={item.description}/>
                     })
                 }
-                
             </div>
+            <Footer/>
         </div>
     )
 }

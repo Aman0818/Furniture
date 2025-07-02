@@ -6,12 +6,14 @@
     position: sticky;
     top: 2vw;
     display: flex;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .fc-part1{
     width: 50%;
     height: 100%;
     border-radius: 1.5rem;
     background-color: white;
+    padding: 5rem 7rem;
 }
 .fc-part2{
     width: 50%;

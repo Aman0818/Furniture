@@ -1,0 +1,23 @@
+.footer{
+    margin-top: 4rem;
+    background-color: #efebe2;
+    width: 100%;
+    padding: 4rem 2rem;
+    border-radius: 2rem;
+}
+.footer-part1{
+    display: flex;
+}
+.fp1-1{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    p{
+        font-weight: 200;
+        color: rgba(33, 23, 0, 0.918);
+        padding-left: 2rem;
+    }
+    img{
+        width: 30%;
+    }
+}

@@ -16,6 +16,7 @@
     top: -2vw;
     z-index: 1;
     overflow: hidden;
+
     img {
         width: 100%;
         height: 100%;
@@ -99,7 +100,7 @@
 .section-part1 {
     width: 30%;
     height: 100%;
-    background: linear-gradient(to left,#92300a,#d65826);
+    background: linear-gradient(to left, #92300a, #d65826);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -128,12 +129,20 @@
     gap: 1rem;
     font-size: 3rem;
     justify-content: space-between;
-
+    svg{
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
     .sp11-desc {
         font-size: 1vw;
         font-weight: 200;
         /* width: 60%; */
     }
+}
+
+.section-part1:hover .sp1-1 svg {
+    transform: translate(0.5rem,-0.5rem);
+    transition: transform 0.3s ease;
+    opacity: 0.2;
 }
 
 .section-part2 {
@@ -187,9 +196,11 @@
 .section2 {
     margin-top: 5rem;
     width: 100%;
+
     p {
         font-size: 2vw;
         font-weight: 500;
     }
+
     /* position: relative; */
 }
