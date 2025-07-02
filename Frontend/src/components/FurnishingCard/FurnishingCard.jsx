@@ -3,13 +3,13 @@ export const FurnishingCard = ({no,head,desc,image}) => {
   return (
     <div className='FurnishingCard'>
         <div className="fc-part1">
-          <div className="">{no}</div>
+          <div className="card-no">{no}</div>
           <div className="">
-            
+
           </div>
-          <div className="">{head}</div>
-          <div className="">{desc}</div>
-          <button>Learn more</button>
+          <div className="card-head">{head}</div>
+          <div className="card-desc">{desc}</div>
+          <button className='card-btn'>Learn more</button>
         </div>
         <div className="fc-part2">
             <img src={image} alt="" />

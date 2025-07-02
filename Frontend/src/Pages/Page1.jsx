@@ -34,7 +34,7 @@ export const Page1 = () => {
                 <img src={Hero} alt="hero image" />
                 <div className='hero-layar'></div>
                 <div className="hero-text">
-                    <p>
+                    <p data-scroll data-scroll-speed='-0.1'>
                         <h3>Bringing Simplicity</h3>
                         <h3>In The Furnishing Market</h3>
                     </p>
@@ -45,7 +45,7 @@ export const Page1 = () => {
                 </div>
             </div>
             <div className="section">
-                <div className="section-part1">
+                <div className="section-part1" data-scroll data-scroll-speed='0.1' >
                     <div className="sp1-1">
                         <p className='sp11-desc'>Eco-conscious and sustainable practices</p>
                         <GoArrowUpRight />
@@ -65,7 +65,7 @@ export const Page1 = () => {
                         </p>
                     </div>
                 </div>
-                <div className="section-part2">
+                <div className="section-part2" data-scroll data-scroll-speed='0.1'>
                     <p id='sp2-desc'>
                         <h3>Who <span style={{ color: '#92300a' }}>We</span> Are</h3>
                         <p>At the heart of our brand lies a passion for design and a commitment to quality. We blend tradition with innovation to deliver furniture that’s as refined as it is comfortable for homes that deserve nothing less.</p>
