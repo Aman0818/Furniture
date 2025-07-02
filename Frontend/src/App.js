@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import './App.css';
-import { Navbar } from './components/Navbar/Navbar';
 import { Page1 } from './Pages/Page1';
 import LocomotiveScroll from 'locomotive-scroll';
 
